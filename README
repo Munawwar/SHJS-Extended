@@ -5,7 +5,7 @@ SHJS (http://shjs.sourceforge.net/) is a source code highlighter written in Java
 	The stuffs that I added to SHJS are:
 	1. Added line numbers, based on SHJS-Linenumbers (https://github.com/F1skr/SHJS-Linenumbers/blob/master/src/sh_main.js)
 	2. 'Select All' option: Click the option, and the code gets selected. This is so you can copy-paste code quickly :)
-	3. Word highlighting: Click on a word in the code, and all occurances of the word are highlighted.
+	3. Word highlighting: Click on a word (or select a few letters of the word) in the code, and all occurrences of the word are highlighted.
 	4. Brace highlighting: Click on a brace and it's matching brace get highlighted. 'Braces' include curly braces {}, square brackets [] and parenthesis ().
 	
 Usage
