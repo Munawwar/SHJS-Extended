@@ -19,15 +19,24 @@
   <script type="text/javascript">
 	function init() { //body onload
 		var start=new Date();
-		
-		sh_highlightDocument('shjsx/', '.min.js'); //where shjsx/ is the directory where the SHJS files are placed.
-		//And '.min.js' are the js file suffix.
 		/*
-			The directory path and suffix is important for autoloading language files.
-			Each language file is named as sh_language.js (or sh_language.min.js after minifying).
-			So the pre element that contains the code to highlight, should have a CSS class named sh-language (note the - and not _)
-			For example, sh-cpp class name on the pre element, will load shjsx/lang/sh_cpp.min.js
+			What does sh_highlightDocument do?
+			It finds all html pre elements whose 'class' attribute is sh-{language} (where {language} is the name of a programming language. See 'lang' folder for names of all supported languages).
+			It then loads the neccessary language files (if it hasn't been loaded) and then syntax highlights the pre element.
+			
+			Function call: sh_highlightDocument(path_to_shjsx_directory, suffix);
+			Any CSS class named sh-{language} on a pre element
+			will cause to load file
+			path_to_shjx_directory/lang/sh_{language}.suffix
+			
+			Example:
+			If a pre element has a class named sh-cpp, then a call such as:
+				sh_highlightDocument('myfolder/shjsx/', '.min.js');
+			will first load myfolder/shjsx/lang/sh_cpp.min.js
+			and then do the syntax highlighting.
 		*/
+		sh_highlightDocument('shjsx/', '.min.js'); //where shjsx/ is the path to directory where the SHJSX files are placed.
+		//And '.min.js' is the js file suffix.
 		
 		var stop=new Date();
 		document.getElementById('processTime').appendChild(document.createTextNode('Time taken to complete process: '+(stop-start)+' ms'));
