@@ -32,24 +32,33 @@ pre.sh-sourceCode span {
 	line-height: 1.1em;
 	font-size: 12px;
 }
-.shx-actions {
-	text-align: right;
-	margin: 0;
+.shx-topbar {
 	background-color: #E8E8E8;
-	padding: 0 3px;
 	border-bottom: 1px solid #d8d8d8;
 	background-image: url('img/toolbar.png');
 	background-repeat: repeat-x;
+	font-family: Helvetica;
+    font-size: 12px;
+	margin: 0;
+	padding: 0 3px 0 7px;
+	position: relative;
+	line-height: 1.5em;
+	color: #606060;
+}
+.shx-actions {
+	margin: 0;
+	padding: 3px;
+	text-align: right;
+	position: absolute;
+	right: 0px;
+	line-height: 1em;
 }
 .shx-actions span {
 	color: #0077E6;
     cursor: pointer;
     display: inline-block;
-    font-family: Helvetica;
-    font-size: 12px;
     font-weight: bold;
     margin-right: 3px;
-    vertical-align: middle;
 	user-select: none;
     -khtml-user-select: none;
     -o-user-select: none;

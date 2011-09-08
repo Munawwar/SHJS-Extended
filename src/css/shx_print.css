@@ -10,8 +10,6 @@ pre.sh-sourceCode {
 .shx-wrapper {
 	border: 1px solid #D8D8D8;
 }
-.shx-innerWrapper {
-}
 .shx-actions {
 	display: none;
 }
@@ -22,7 +20,6 @@ pre.sh-sourceCode {
 	color: inherit;
 	background-color: inherit;
 }
-
 .shx-linenum {
 	display: none;
 }

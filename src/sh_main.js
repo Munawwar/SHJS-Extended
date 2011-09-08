@@ -831,12 +831,22 @@ function sh_lineNumbers(element, lines) {
   wrapperDiv.setAttribute('class','shx-wrapper');
   innerWrapper.setAttribute('class','shx-innerWrapper');
   
+  var topbar=document.createElement('div');
+  topbar.setAttribute('class','shx-topbar');
+  
   //Options toolbar
-  var actions=document.createElement('div'), selectSpan=document.createElement('span');
+  var actions=document.createElement('span'), selectSpan=document.createElement('span');
   actions.setAttribute('class','shx-actions');
   selectSpan.appendChild(document.createTextNode('Select All'));
   selectSpan.onclick=function() {shx_selectAll(element); selectSpan=null;}
   actions.appendChild(selectSpan);
+  
+  var title=element.getAttribute("title");
+  if(title!=null && title.length>0) {
+	element.removeAttribute("title"); 
+	topbar.appendChild(document.createTextNode(title));
+  }
+  topbar.appendChild(actions);
   
   //create line number element
   var lineNumbers = document.createElement('pre');
@@ -848,7 +858,7 @@ function sh_lineNumbers(element, lines) {
   }
   
   //Append to wrapper span
-  wrapperDiv.appendChild(actions);
+  wrapperDiv.appendChild(topbar);
   wrapperDiv.appendChild(innerWrapper);
   
   //replace element with the new table code structure
@@ -858,10 +868,13 @@ function sh_lineNumbers(element, lines) {
   innerWrapper.appendChild(lineNumbers);
   innerWrapper.appendChild(element);
   
-  //Making both column of same height
+  //Making both column of table of same height
   lineNumbers.style.paddingBottom=0;
   var diff=element.offsetHeight - lineNumbers.clientHeight;
   lineNumbers.style.paddingBottom=(diff)+'px';
+  
+  //Adjust height of topbar
+  topbar.style.height = (actions.offsetHeight) +'px';
 }
 
 /**
