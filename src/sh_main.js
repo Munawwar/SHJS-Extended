@@ -853,9 +853,11 @@ function sh_lineNumbers(element, lines) {
   lineNumbers.setAttribute('class','shx-linenum'); //add class for css styling
   
   //add line numbers
+  var html='';
   for(var i = 1; i <= lines; i++) {
-	lineNumbers.appendChild(document.createTextNode(i+"\n"));
+	html = html + ('<span>'+i+"</span>\n");
   }
+  lineNumbers.innerHTML = html;
   
   //Append to wrapper span
   wrapperDiv.appendChild(topbar);
