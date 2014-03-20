@@ -1,3 +1,5 @@
+WARNING: This project is no longer maintained. However, it still works :)
+
 Syntax Highlighter in JavaScript Extended (SHJSX)
 ===================================================
 
