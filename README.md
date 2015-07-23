@@ -35,7 +35,7 @@ Place each source code snippet in a &lt;pre&gt; element. (Currently SHJS cannot 
     </head>
     <body onload="sh_highlightDocument();">
 
-    <pre class="sh_perl">
+    <pre class="sh-perl">
     #!/usr/bin/perl
     
     use utf8;
