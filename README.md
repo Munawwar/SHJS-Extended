@@ -26,25 +26,26 @@ Usage
 -------
 Place each source code snippet in a &lt;pre&gt; element. (Currently SHJS cannot highlight code which is not in a pre element.) The pre element must be in the class sh_LANGUAGE, where LANGUAGE specifies the programming language in which the source code is written.
 
+```html
+<head>
+....
+  <link type="text/css" rel="stylesheet" href="css/sh_nedit.css">
+  <script type="text/javascript" src="sh_main.js"></script>
+  <script type="text/javascript" src="lang/sh_perl.js"></script>
+</head>
+<body onload="sh_highlightDocument();">
 
-    <head>
-    ....
-      <link type="text/css" rel="stylesheet" href="css/sh_nedit.css">
-      <script type="text/javascript" src="sh_main.js"></script>
-      <script type="text/javascript" src="lang/sh_perl.js"></script>
-    </head>
-    <body onload="sh_highlightDocument();">
-
-    <pre class="sh-perl">
-    #!/usr/bin/perl
-    
-    use utf8;
-    use v5.14;
-    use warnings;
-    
-    say 'Hello World';
-    </pre>
-
+  <pre class="sh-perl">
+  #!/usr/bin/perl
+  
+  use utf8;
+  use v5.14;
+  use warnings;
+  
+  say 'Hello World';
+  </pre>
+</body>
+```
 Also see example.html.
 
 
