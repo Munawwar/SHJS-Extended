@@ -975,7 +975,7 @@ function sh_highlightDocument(prefix, suffix) {
       if (htmlClass.substr(0, 3) === 'sh-') {
         var language = htmlClass.substring(3);
         if (language in sh_languages) {
-          sh_highlightElement(element, sh_languages[sh_lang]);
+          sh_highlightElement(element, sh_languages[language]);
         }
         else if (typeof(prefix) === 'string' && typeof(suffix) === 'string') {
           sh_load(language, element, prefix, suffix);
