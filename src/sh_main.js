@@ -972,7 +972,7 @@ function sh_highlightDocument(prefix, suffix) {
       if (htmlClass === 'sh-sourcecode') {
         continue;
       }
-      if (htmlClass.substr(0, 3) === 'sh-') {
+      if ((/sh[\-_]/).test(htmlClass.substr(0, 3))) {
         var language = htmlClass.substring(3);
         if (language in sh_languages) {
           sh_highlightElement(element, sh_languages[language]);
